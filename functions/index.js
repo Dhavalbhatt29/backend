@@ -6,12 +6,12 @@ app.use(cors())
 
 app.use(express.json())
 
-app.get("/.netlify/function/index", (req, res) => {
+app.get("/.netlify/functions/index", (req, res) => {
     res.send("success");
 })
 
-app.listen(5000, () => {
-    console.log("Server is running on the port 5000")
-})
+// app.listen(5000, () => {
+//     console.log("Server is running on the port 5000")
+// })
 
 module.exports.handler = serverless(app);
