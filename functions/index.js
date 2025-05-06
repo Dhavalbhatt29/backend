@@ -6,7 +6,7 @@ app.use(cors())
 
 app.use(express.json())
 
-app.get("/", (req, res) => {
+app.get("/.netlify/function/index", (req, res) => {
     res.send("success");
 })
 
